@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+![Robofriends logo](documentation/robofriends-logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# **ROBOFRIENDS**
+This is a simple website built using Create React App.
 
-In the project directory, you can run:
+[Link](https://marcgithub23.github.io/robofriends/) to the website.
 
-### `npm start`
+![Responsive mockup](documentation/responsive-mockup.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- HTML
+- CSS (Tachyons)
+- JavaScript + JSX
+- React (Create React App)
+- API
+- VSCode
+- Git
+- GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Homepage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The homepage contains the logo, search box, and card list that displays image, name, and email address.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![homepage](documentation/homepage.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Manual Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Feature | Action | Expected Result | Y/N | Comments |
+| --- | --- | --- | --- | --- |
+| Homepage | Access website link | Display card list in a grid with name and email | Y | N/A |
+| Search box | Type in name to search | Filter card list to show corresponding search | Y | N/A |
+| Card | Hover or click | Animate for interactivity | Y | N/A |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The website was deployed to GitHub Pages. The steps to deploy are as follows:
 
-## Learn More
+1. Add `homepage` to `package.json`
+`"homepage": "https://myusername.github.io/my-app",`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install `gh-pages` in the terminal
+`npm install --save gh-pages`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Deploy to `scripts` in `package.json` by adding `predeploy` and `deploy` as below
+`"scripts": { "predeploy": "npm run build", "deploy": "gh-pages -d build" }`
 
-### Code Splitting
+4. Deploy the site by running `npm run deploy` in the terminal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. Make sure GitHub Pages option in your GitHub project settings is set to use the `gh-pages` branch
 
-### Analyzing the Bundle Size
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This was coded along the project walkthrough by Andrei Neagoie on [ZTM](https://zerotomastery.io/) in the React.js Fundamentals section of the Complete Web Developer in 2024: Zero to Mastery course.
 
-### Making a Progressive Web App
+The robot images were randomly selected via API from [robohash](https://robohash.org/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Reflective Learning
 
-### Advanced Configuration
+This was my first foray into React. I learned the following concepts:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Components:** building blocks of a React app, which are small, reusable parts that can be assembled to create UIs.
+- **Containers:** smart components that manage state or interact with logic (like fetching data from an API).
+- **One way data flow:** data moves from the top to the bottom of the component hierarchy.
+    - **State:** represents the dynamic data in a component, like user input or fetched data.
+    - **Props:** a way of passing data from a parent component down to a child component. A parent component (like a container) can pass its state or other data to child components via props, but the child component can’t modify the prop.
